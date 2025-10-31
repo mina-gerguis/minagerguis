@@ -139,7 +139,9 @@ const Samples = () => {
                                         rel="noopener noreferrer"
                                         className={styles.live}
                                         href={projectSamples.live}>
-                                        <LuExternalLink fontSize={18} />
+                                        <LuExternalLink
+                                            className={styles.icon}
+                                            fontSize={18} />
                                         Live Demo
                                     </a>
                                     <a
@@ -147,7 +149,9 @@ const Samples = () => {
                                         rel="noopener noreferrer"
                                         className={styles.github}
                                         href={projectSamples.github}>
-                                        <PiGithubLogoFill fontSize={18} />
+                                        <PiGithubLogoFill
+                                            className={styles.icon}
+                                            fontSize={18} />
                                         Github
                                     </a>
                                 </div>
