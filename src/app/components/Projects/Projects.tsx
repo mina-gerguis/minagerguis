@@ -44,19 +44,19 @@ const Projects = () => {
             id: 'frontend',
             name: 'Front End Development',
             details: 'Front-End skilled in HTML, CSS, JavaScript, React, with experience in SCSS, Bootstrap , and Tailwind Framwork',
-            link: '/ront'
+            link: 'FrontEndDevelopment'
         },
         {
             id: 'backend',
             name: 'Back End Development',
             details: 'Node.js, Express, and database management using MongoDB and MySQL for robust server-side applications',
-            link: 'BackEnd'
+            link: 'BackEndDevelopment'
         },
         {
             id: 'design',
             name: 'UI/UX Design',
             details: 'Highly proficient in Figma & Adobe XD he specializes in creating modern, user-friendly designs that brand identity',
-            link: 'ui-ux-design'
+            link: 'UIUXDesign'
         },
         {
             id: 'video-editing',
@@ -98,7 +98,8 @@ const Projects = () => {
                                     <p className={styles.serviceDetail}>{service.details}</p>
 
                                     <Link
-                                        href={service.link}
+                                        href={`../components/${service.link}`}
+                                        hrefLang=''
                                         className={styles.viewButton}
                                     >
                                         View Projects  <RiExternalLinkLine fontSize={22}/>
