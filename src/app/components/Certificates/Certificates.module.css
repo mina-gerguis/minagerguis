@@ -1,0 +1,312 @@
+.section {
+    padding: 80px 0px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    background: none;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title {
+    font-family: 'Xeroda';
+    font-size: var(--font-title-size);
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--item-color);
+}
+
+.sliderContainer {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.sliderContainer::before,
+.sliderContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.sliderContainer::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-color) 0%, transparent 30%);
+}
+
+.sliderContainer::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-color) 0%, transparent 10%);
+}
+
+.slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+    direction: rtl;
+}
+
+.slider::-webkit-scrollbar {
+    height: 10px;
+}
+
+.slider::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.slider::-webkit-scrollbar-thumb {
+    background: rgba(59, 130, 246, 0.6);
+    border-radius: 10px;
+}
+
+.slider::-webkit-scrollbar-thumb:hover {
+    background: rgba(59, 130, 246, 0.8);
+}
+
+.certificateCard {
+    flex: 0 0 350px;
+    background: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificateImageContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    max-height: 90% !important;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.certificateImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.925);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.certificateCard:hover .overlay {
+    opacity: 1;
+}
+
+.viewText {
+    color: white;
+    font-size: 1.2rem;
+    font-family: "Xeroda";
+    font-weight: bold;
+}
+
+.dialogContent {
+    width: 40%;
+    max-height: 90vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: var(--card-linear);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 9px;
+    z-index: 9999;
+    overflow-y: auto;
+    animation: fadeIn 0.3s ease;
+    scrollbar-width: thin;
+    scrollbar-color: var(--item-color) transparent;
+    box-shadow: rgba(0, 0, 0, 0.356) 5px 10px 50px, rgb(0, 0, 0, 0.7) -5px 0px 250px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dialogTitle {
+    font-family: 'Xeroda';
+    font-size: var(--font-title-size);
+    color: var(--item-color);
+    text-align: center;
+}
+
+.dialogBody {
+    padding: 20px 0;
+    width: 90%;
+    margin: 0 auto
+}
+
+.image {
+    background-color: rgba(3, 0, 0, 0.39);
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    width: 100%;
+    height: 90%;
+}
+
+.dialogInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dialogInfoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1;
+}
+
+.dialogInfoItem strong {
+    font-family: 'Xeroda';
+    color: var(--item-color);
+    font-size: 1.4rem;
+}
+
+.dialogInfoItem span,
+.dialogInfoItem p {
+    color: var(--color-muted);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Plus";
+    line-height: 1.7;
+    margin-bottom: 6px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-x: hidden;
+}
+
+.butLink {
+    margin: 1rem 0;
+}
+
+.link {
+    background: var(--ios-blue-alpha);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: "Plus";
+    font-weight: 600;
+    text-align: center;
+    color: var(--item-color);
+    transition: all .2s ease-in;
+}
+
+.link:hover {
+    background-color: var(--ios-blue-alpha);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/*================================
+    Media Screen
+=================================*/
+@media (max-width: 1400px) {
+    .dialogContent {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .dialogTitle {
+        font-size: 2rem;
+    }
+
+    .dialogInfoItem strong {
+        font-size: 1.2rem;
+    }
+
+    .dialogInfoItem span,
+    .dialogInfoItem p {
+        font-size: .8rem;
+    }
+
+    .link {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .dialogContent {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .dialogBody {
+        padding: 10px 0;
+        width: 99%;
+    }
+
+    .image {
+        padding: 8px;
+        margin-bottom: 1rem;
+    }
+
+    .dialogTitle {
+        font-size: 1.6rem;
+    }
+
+    .dialogInfoItem strong {
+        font-size: 1.1rem;
+    }
+
+    .dialogInfoItem span,
+    .dialogInfoItem p {
+        font-size: .7rem;
+    }
+}
+
+.skills {
+    overflow: hidden;
+    height: auto;
+}
+
+.skills span:nth-child(1) {
+    margin: 0 6px 0 0;
+}
+
+.skills span {
+    display: inline-block;
+    margin: 0 6px;
+    background: var(--ios-blue-alpha-2);
+    border: 1px solid var(--blue);
+    color: var(--item-color);
+    padding: .4rem .8rem;
+    font-family: "Plus";
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 20px;
+}

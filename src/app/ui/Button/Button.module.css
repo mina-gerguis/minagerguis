@@ -1,0 +1,97 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.button:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: scale(1.1);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+.ios {
+  background: transparent;
+  border: 1px solid #42424269;
+  color: var(--item-color);
+  font-family: "Plus", sans-serif;
+  font-weight: 400;
+}
+
+.ios:hover {
+  background: rgba(0, 122, 255, 0.9);
+}
+
+.iosOutline {
+  background: transparent;
+  color: var(--ios-blue);
+  border: 1px solid #42424269;
+}
+
+.iosOutline:hover {
+  background: var(--ios-blue);
+  color: white;
+}
+
+.iosSecondary {
+  background: var(--color-ios-gray-light);
+  color: var(--color-ios-gray-dark);
+}
+
+.iosSecondary:hover {
+  background: rgba(242, 242, 247, 0.8);
+}
+
+.ghost {
+  background: transparent;
+  box-shadow: none;
+}
+
+.ghost:hover {
+  background: var(--color-accent);
+}
+
+.secondary {
+  background: white;
+  color: var(--color-ios-blue);
+}
+
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Sizes */
+.sm {
+  padding: 8px 16px;
+  font-size: 14px;
+  height: 36px;
+}
+
+.lg {
+  padding: 14px 32px;
+  font-size: 18px;
+  height: 48px;
+  border-radius: var(--radius-xl);
+}
+
+.iosLarge {
+  padding: 10px 14px;
+  font-size: 16px;
+}
