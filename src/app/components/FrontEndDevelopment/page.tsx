@@ -82,7 +82,8 @@ const Samples = () => {
             live: 'https://experience.eyouthlearning.com/certificates/b651ede6b3a643068d1e112b3dc7256c',
             github: 'b651ede6b3a643068d1e112b3dc7256c',
             image: ideaWebSiteService,
-            assets: Bmi1
+            assets: Bmi1,
+            assets2: Bmi2,
         },
     ];
 
