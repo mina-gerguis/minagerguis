@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { LuExternalLink } from "react-icons/lu";
 import { PiGithubLogoFill } from "react-icons/pi";
 import { StaticImageData } from 'next/image';
-import styles from './Projects.module.css';
+import styles from './projectSamples.module.css';
 import Float from '../../ui/Float/Float';
 import Navbar from '@/app/components/Navbar/Navbar';
 import Footer from '@/app/components/Footer/Footer';

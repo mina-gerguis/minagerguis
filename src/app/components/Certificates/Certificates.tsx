@@ -11,11 +11,10 @@ import { StaticImageData } from 'next/image';
 import Image from 'next/image';
 const Law = 'image/certificates/Law_EYouth.jpg';
 const MaharaTechHTML = 'image/certificates/MaharaTech_HTML_CSS.jpg'
-const LinkedInCss = 'image/certificates/LinkedIn_Css.jpg';
+const LinkedInCss = 'image/certificates/LinkedIn_CSS.jpg';
 const LinkedInHTML = 'image/certificates/LinkedIn_HTML.jpg';
 const LinkedInUX = 'image/certificates/LinkedIn_UXDesign.jpg';
 const AlxPF = 'image/certificates/Alx_PF.jpg';
-const AlmantorHTML = 'image/certificates/almantor_html.jpg';
 
 interface Certificate {
     id: number;
@@ -104,11 +103,11 @@ const Certificates = () => {
         // Alx Professional
         {
             id: 5,
-            title: 'Alx Professional',
+            title: 'Alx Professional Foundations',
             issuer: 'ALX Africa',
             date: '2023',
-            description: 'A professional certificate awarded by ALX Africa for completing the Professional Foundations program, focusing on leadership, critical thinking, teamwork, and project management skills essential for a modern workplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplaceworkplace.',
-            skills: [],
+            description: 'Successfully completed the ALX Professional Foundations Program, an intensive and transformative experience designed to build a strong foundation of professional excellence, leadership mindset, and critical thinking. Through this program, I developed essential communication, collaboration, and problem-solving skills, along with a deep understanding of emotional intelligence, adaptability, and personal growth in a fast-paced work environment. The program empowered me to become a more impactful, accountable, and future-ready professional, capable of thriving in diverse teams and delivering meaningful results in the global digital economy.',
+            skills: ["Solving Skills","Professional Excellence","Leadership Mindset"],
             link: 'https://savanna.alxafrica.com/certificates/MF2z8LsRhS',
             image: AlxPF
         },

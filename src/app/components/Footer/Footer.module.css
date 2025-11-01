@@ -123,7 +123,9 @@
     transition: all .5s ease-in-out;
 }
 
-
+/*==========================
+    MEDIA SCREEN
+===========================*/
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -136,5 +138,24 @@
 
     .rightSection {
         gap: 2rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .footer {
+        padding: 2rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .trialButton {
+        padding: .8rem 1.5rem;
+        font-size: 0.7rem;
+    }
+
+    .copyright {
+        font-size: 16px;
     }
 }
