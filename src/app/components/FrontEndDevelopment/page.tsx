@@ -15,10 +15,10 @@ import {
     DialogTitle,
 } from "@/app/ui/dialog";
 import Image from 'next/image';
-import BmiCaluclatorr from '@/assets/bmiCaluclatorr.png';
+import BmiCaluclatorr from '@/assets/FrondEndImage/Bmi/main.png';
 import Bmi1 from '@/assets/FrondEndImage/Bmi/1.png';
-import Bmi2 from '@/assets/FrondEndImage/Bmi/2.png';
-import ideaWebSiteService from '@/assets/ideaWebSiteService.png';
+import ideaWebSiteService from '@/assets/FrondEndImage/IdeaService/main.png';
+import Idea1 from '@/assets/FrondEndImage/IdeaService/1.png';
 
 interface projectSamples {
     id: number;
@@ -28,8 +28,7 @@ interface projectSamples {
     live?: string;
     github: string;
     image: string | StaticImageData;
-    assets: string | StaticImageData;
-    assets2: string | StaticImageData;
+    assets1: string | StaticImageData;
 }
 
 const Samples = () => {
@@ -70,20 +69,18 @@ const Samples = () => {
             live: 'https://bmi-calculator-mgyv.vercel.app',
             github: 'https://github.com/mina-gerguis/BMI-Calculator',
             image: BmiCaluclatorr,
-            assets: Bmi1,
-            assets2: Bmi2
+            assets1: Bmi1,
         },
-        // LinkeIn Css Development
+        // Idea Digital Service
         {
             id: 2,
-            title: 'Bmi Caluclator',
-            description: 'A clean and responsive web application that allows users to quickly calculate their Body Mass Index (BMI) by entering their height and weight. The interface is simple, modern, and fully optimized for mobile devices. It instantly displays the BMI result along with a clear category (Underweight, Normal, Overweight, or Obese). The project focuses on accessibility, smooth user experience, and accurate health insights in an easy-to-use design.',
-            skills: ["React", "Css", "JaveScript"],
-            live: 'https://experience.eyouthlearning.com/certificates/b651ede6b3a643068d1e112b3dc7256c',
-            github: 'b651ede6b3a643068d1e112b3dc7256c',
+            title: 'Idea Digital Service',
+            description: '“Idea” is a professional digital agency website built to showcase a full range of modern web and app development services. The project focuses on clean design, intuitive navigation, and conversion-focused content that reflects the agency’s commitment to innovation and quality. It features multiple sections such as “About Us,” “Our Services,” “Why Choose Us,” “Client Testimonials,” and an interactive contact form. The website emphasizes user experience, responsive design, and optimized SEO structure to enhance visibility and engagement.',
+            skills: ["HTML5", "TypeScript", "JaveScript", "CSS Modules", "Git/Github"],
+            live: 'https://idea-minagerguis.vercel.app/',
+            github: 'https://github.com/mina-gerguis/IdeaDigitalService',
             image: ideaWebSiteService,
-            assets: Bmi1,
-            assets2: Bmi2,
+            assets1: Idea1,
         },
     ];
 
@@ -100,7 +97,6 @@ const Samples = () => {
                         <h2 className={styles.mainTitle}>Front-End Projects</h2>
                         <p className={styles.secondTitle}>These are examples of my work in developing the front end.</p>
                     </div>
-
                     <div className={styles.content}>
                         {projectSamples.map((projectSamples) => (
                             <div
@@ -159,37 +155,10 @@ const Samples = () => {
                         ))}
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                {/*==================================
+                    OPRN CARD 
+                ===================================*/}
                 <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
-
                     <DialogContent className={styles.dialogContent}>
                         <Float />
                         <DialogHeader>
@@ -224,22 +193,18 @@ const Samples = () => {
                                     </p>
                                 </div>
                                 <div className={styles.dialogAssets}>
-                                    <div>
-                                        {selectedProject?.image && (
-                                            <Image
-                                                src={selectedProject.assets2}
-                                                alt={selectedProject?.title}
-                                                className={styles.assetsImage}
-                                                width={10}
-                                                height={10}
-                                            />
-                                        )}
-                                    </div>
+                                    {selectedProject?.image && (
+                                        <Image
+                                            src={selectedProject.assets1}
+                                            alt={selectedProject?.title}
+                                            className={styles.assetsImage}
+                                            width={10}
+                                            height={10}
+                                        />
+                                    )}
                                 </div>
                                 <div className={styles.dialogInfoItem}>
-                                    <strong>Certificate Link :</strong>
                                     <div className={styles.butLink}>
-
                                         <a
                                             target='_blank'
                                             rel="noopener noreferrer"
@@ -256,7 +221,6 @@ const Samples = () => {
                                             <PiGithubLogoFill fontSize={18} />
                                             Github
                                         </a>
-
                                     </div>
                                 </div>
                             </div>
