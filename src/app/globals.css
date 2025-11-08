@@ -89,6 +89,8 @@ body {
   --glass-background: #fafafa73;
   --glass-border: rgba(133, 133, 133, 0.589);
   --card-color: rgba(0, 0, 0, 0.0);
+  --card-border: rgba(194, 194, 194, 0.589);
+  --card-hover: #0070f31a;
   --container-color: #f0f1ff;
   --card-linear: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   --text-gradient: linear-gradient(90deg, rgb(0, 0, 0), rgb(116, 111, 111));
@@ -108,6 +110,7 @@ body.dark {
   --glass-background: rgba(14, 6, 43, 0.233);
   --glass-border: rgba(20, 35, 66, 0.712);
   --card-color: rgba(225, 225, 225, 0.03);
+  --card-border: rgba(7, 1, 44, 0.589);
   --container-color: #05050c;
   --card-linear: linear-gradient(to left top, #000000c4, #001130);
   --text-gradient: linear-gradient(90deg, rgb(160, 158, 158), rgb(59, 59, 59));

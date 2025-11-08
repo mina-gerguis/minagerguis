@@ -1,0 +1,93 @@
+.container h2 {
+    font-size: 32px;
+    font-family: "Tajawal";
+    color: var(--item-color);
+    text-align: center;
+    padding: 100px 0 0 0;
+}
+
+.content {
+    width: 100%;
+    direction: rtl;
+    display: grid;
+    gap: 20px;
+    padding: 60px 40px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 2fr));
+}
+
+.content h3 {
+    color: var(--item-color);
+    font-size: 18px;
+    font-family: "Cairo";
+    font-weight: 400;
+}
+
+.card {
+    background: var(--card-color);
+    border: 1px solid var(--card-border);
+    padding: 25px 0;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.04);
+    background-color: var(--card-hover);
+}
+
+.icon {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.start {
+    color: rgb(241, 129, 0);
+}
+
+.html {
+    color: #e44d26;
+}
+
+.css {
+    color: #1572b6;
+}
+
+.js {
+    color: #f7df1e;
+}
+
+.git {
+    color: #f34f29;
+}
+
+.react {
+    color: #61dbfb;
+}
+
+.node {
+    color: #3c873a;
+}
+
+.next {
+    color: #000;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #000;
+    color: #fff;
+    font-size: 11px;
+    font-family: "Cairo";
+    padding: 1px 6px;
+    border-radius: 3px;
+}

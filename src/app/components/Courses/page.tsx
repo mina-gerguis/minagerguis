@@ -6,7 +6,7 @@ function Courses() {
       <h1>Courses</h1>
 
       {/* بدل <a> استخدم <Link> */}
-      <Link href="/components/Courses/data/css">
+      <Link href="/components/Courses/data">
         Lessone
       </Link>
     </>

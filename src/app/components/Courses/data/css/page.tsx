@@ -30,7 +30,6 @@ export default function CSSCourse() {
         }
     };
 
-    // ✅ لما أختار درس جديد، يغير المحتوى ويقفل القائمة لو الشاشة صغيرة
     const handleLessonClick = (lesson: string) => {
         setActiveLesson(lesson);
         if (window.innerWidth <= 768) {

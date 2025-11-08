@@ -1,6 +1,9 @@
 .footer {
     background-image: radial-gradient(circle 349px at 0.3% 100%, rgb(4, 0, 255) 0%, rgb(2, 8, 3) 100.7%);
     padding: 5rem 5rem 2rem 5rem;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
 }
 
 .container {
