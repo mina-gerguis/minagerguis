@@ -17,7 +17,13 @@
     overflow-y: auto;
     position: fixed;
     top: 0;
+    transform: translateX(300);
     transition: transform 0.35s ease-in-out, box-shadow 0.3s ease;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar::-webkit-scrollbar {
@@ -38,10 +44,6 @@
     background-color: #0059c9;
 }
 
-.sidebar.open {
-    transform: translateX(0);
-    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
-}
 
 .sidebar h2 {
     font-family: 'Cairo';
@@ -144,14 +146,9 @@ ul li.active {
     }
 
     .sidebar {
-        transform: translateX(300);
         position: fixed;
         right: 0;
         width: 250px;
-    }
-
-    .sidebar.open {
-        transform: translateX(0);
     }
 
     .menuButton {
