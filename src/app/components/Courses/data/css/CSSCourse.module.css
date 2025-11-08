@@ -12,7 +12,7 @@
     direction: rtl;
     background-color: var(--color-muted-3);
     color: var(--item-color);
-    padding: 5% 20px 20px 20px;
+    padding: 80px 20px 20px 20px;
     height: 100vh;
     overflow-y: auto;
     position: fixed;
@@ -44,19 +44,12 @@
     background-color: #0059c9;
 }
 
-
 .sidebar h2 {
     font-family: 'Cairo';
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 13px;
 }
-
-/* 
-.sidebar hr {
-    border-bottom: 1px solid #000000;
-    width: 80%;
-} */
 
 .sidebar ul {
     list-style: none;
@@ -133,21 +126,11 @@ ul li.active {
 
 @media (max-width: 768px) {
     .courseContainer {
-        direction: ltr;
-        display: block;
-        flex-direction: row-reverse;
-        min-height: 100vh;
-        font-family: sans-serif;
         overflow: hidden;
-    }
-
-    .lessonContent {
-        min-width: 100%;
     }
 
     .sidebar {
         transform: translateX(100%);
-        position: fixed;
         right: 0;
         width: 250px;
     }
@@ -162,6 +145,7 @@ ul li.active {
     }
 
     .lessonContent {
+        min-width: 100%;
         margin-left: 0;
         padding-top: 60px;
     }
