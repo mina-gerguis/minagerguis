@@ -12,6 +12,9 @@ import Projects from "@/app/components/Projects/Projects";
 import Certificates from "@/app/components/Certificates/Certificates";
 import Content from "@/app/components/content/content"
 import Footer from "@/app/components/Footer/Footer"
+
+
+import Courses from "./components/Courses/page";
 export default function Home() {
   const items = [
     {
@@ -59,9 +62,9 @@ export default function Home() {
       <Skills />
       <Projects />
       <Certificates />
+      <Courses />
       <Content />
       <Footer />
-
 
 
 

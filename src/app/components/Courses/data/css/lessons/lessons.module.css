@@ -1,0 +1,93 @@
+.container {
+    direction: rtl;
+    font-family: "Cairo";
+}
+
+.container span {
+    color: var(--span);
+    font-weight: 600;
+    margin: 0 .2rem;
+}
+
+.container li {
+    list-style: inside;
+}
+
+.container pre {
+    background: #1e1e1e;
+    color: #dcdcdc;
+    padding: 16px 26px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: "Fira Code", monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: .6rem 0;
+    direction: ltr;
+}
+
+.container code {
+    color: #008bd6;
+}
+
+.container .code p {
+    font-size: 14px;
+    margin: .4rem;
+    color: var(--span);
+}
+
+.header {
+    font-family: "Tajawal";
+    text-align: center;
+}
+
+.header h2 {
+    font-size: 18px;
+}
+
+.list {
+    background-color: var(--color-muted-3);
+    padding: .5rem 2rem;
+    margin: 3rem 0;
+}
+
+.list li {
+    list-style: none !important;
+}
+
+.list .icon {
+    margin-left: .6rem;
+}
+
+.list a {
+    display: flex;
+    align-items: center;
+    margin: .4rem 0;
+}
+
+.list a span {
+    font-weight: 700;
+    margin: 0 .4rem;
+}
+
+.list a:hover {
+    background: var(--hover-color);
+}
+
+.list a:hover {
+    padding: 0rem .2rem;
+    transition: padding .3s ease-in-out;
+}
+
+.content {
+    padding: .7rem 1rem;
+    color: var(--color-muted-4);
+    border-bottom: 1px solid var(--border);
+}
+
+.titleMain {
+    color: var(--item-color);
+    font-size: 22px;
+    margin: .5rem 0;
+    font-family: "Tajawal";
+}

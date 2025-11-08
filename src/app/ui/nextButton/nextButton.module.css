@@ -1,0 +1,29 @@
+.nexButton {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    padding: 2rem 0;
+}
+
+.nexButton button {
+    padding: 10px 20px;
+    background: var(--button);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Tajawal";
+}
+
+.nexButton button:hover {
+    background: #020079;
+    transition: all .3s ease-in;
+}
+
+.nexButton button:disabled {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: #999;
+    cursor: not-allowed;
+}

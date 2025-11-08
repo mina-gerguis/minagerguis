@@ -11,6 +11,7 @@
   top: 0;
   background-color: var(--navbar);
 }
+
 @media (max-width: 400px) {
   .container {
     padding: 0;
@@ -23,6 +24,7 @@
   font-family: "Xeroda", sans-serif;
   color: var(--item-color);
 }
+
 @media (max-width: 400px) {
   .logo {
     font-size: 10px;
@@ -33,6 +35,7 @@
   display: flex;
   justify-content: space-evenly;
 }
+
 .socialMedia a,
 .socialMedia button {
   cursor: pointer;
@@ -47,11 +50,14 @@
   justify-content: space-evenly;
   transition: all 0.5s ease;
 }
+
 .socialMedia a:hover,
 .socialMedia button:hover {
   background-color: var(--hover-color);
 }
+
 @media (max-width: 400px) {
+
   .socialMedia a,
   .socialMedia button {
     font-size: 15px;
