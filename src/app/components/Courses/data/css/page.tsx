@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from "react";
+import { MdOutlineCloseFullscreen } from "react-icons/md";
 import styles from "./CSSCourse.module.css";
 import OverviewLesson from "./lessons/overview";
 import FontsLesson from "./lessons/font";
@@ -25,7 +26,7 @@ export default function CSSCourse() {
             case "borders":
                 return <BordersLesson />;
             default:
-                // return <ColorsLesson />;
+            // return <ColorsLesson />;
         }
     };
 
@@ -62,6 +63,12 @@ export default function CSSCourse() {
 
                 {/* القائمة الجانبية */}
                 <aside className={`${styles.sidebar} ${menuOpen ? styles.open : ""}`}>
+                    <div className={styles.headSidebar}>
+                        <h2>محتويات الدورة</h2>
+                        <button className={styles.closeButton} onClick={() => setMenuOpen(!menuOpen)}>
+                            <MdOutlineCloseFullscreen />
+                        </button>
+                    </div>
                     <h2>أساسيات اللغة</h2>
 
                     <ul>
@@ -122,7 +129,7 @@ export default function CSSCourse() {
                         disableNext={currentIndex === lessons.length - 1}
                     />
                     {renderLesson()}
-                                        <NavButtons
+                    <NavButtons
                         onPrev={handlePrev}
                         onNext={handleNext}
                         disablePrev={currentIndex === 0}
