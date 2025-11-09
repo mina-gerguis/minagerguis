@@ -10,9 +10,9 @@
     width: 100%;
     direction: rtl;
     display: grid;
-    gap: 20px;
+    gap: 15px;
     padding: 60px 40px;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(190px, 2fr));
 }
 
 .content h3 {
@@ -41,6 +41,11 @@
 .icon {
     font-size: 60px;
     margin-bottom: 10px;
+}
+
+
+.basic {
+    color: rgb(0, 123, 255);
 }
 
 .start {
@@ -75,6 +80,94 @@
     color: #000;
 }
 
+.database {
+    color: #f29111;
+}
+
+.mysql {
+    color: #00758f;
+}
+
+.python {
+    color: #919400;
+}
+
+.cpp {
+    color: #00599c;
+}
+
+.java {
+    color: #5382a1;
+}
+
+.linux {
+    color: #fbc02d;
+}
+
+.terminal {
+    color: #4d4d4d;
+}
+
+.php {
+    color: #787cb5;
+}
+
+.dart {
+    color: #0175c2;
+}
+
+.flutter {
+    color: #02569b;
+}
+
+.csharp {
+    color: #68217a;
+}
+
+.uiux {
+    color: #f24e1e;
+}
+
+.progress {
+    color: #00c853;
+}
+
+.algorithms {
+    color: #2962ff;
+}
+
+.network {
+    color: #ff6d00;
+}
+
+.networkProtection {
+    color: #d50000;
+}
+
+.docker {
+    color: #2496ed;
+}
+
+.ts {
+    color: #3178c6;
+}
+
+.tailwind {
+    color: #38bdf8;
+}
+
+.bootstrap {
+    color: #7952b3;
+}
+
+.sass {
+    color: #cc6699;
+}
+
+.laravel {
+    color: #ff2d20;
+}
+
 .disabled {
     opacity: 0.5;
     cursor: not-allowed;
@@ -90,4 +183,21 @@
     font-family: "Cairo";
     padding: 1px 6px;
     border-radius: 3px;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeUp {
+    opacity: 0;
+    animation: fadeUp 0.7s ease-out forwards;
 }

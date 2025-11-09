@@ -84,8 +84,8 @@
 }
 
 .sidebar li:hover {
-    background: var(--hover-color);
-    color: var(--item-color);
+    background: #007bff;
+    color: rgb(255, 255, 255);
 }
 
 ul li.active {
@@ -147,4 +147,21 @@ ul li.active {
         max-width: 100%;
         padding-top: 60px;
     }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeUp {
+    opacity: 0;
+    animation: fadeUp 0.7s ease-out forwards;
 }

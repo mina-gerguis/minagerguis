@@ -54,7 +54,7 @@ export default function CSSCourse() {
     return (
         <div>
             <Navbar />
-            <div className={styles.courseContainer}>
+            <div className={`${styles.courseContainer} ${styles.fadeUp}`}>
                 {/* زر القائمة في الموبايل */}
                 <button className={styles.menuButton} onClick={() => setMenuOpen(!menuOpen)}>
                     ☰
