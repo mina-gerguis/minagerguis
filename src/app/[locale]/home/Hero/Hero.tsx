@@ -1,49 +1,18 @@
 "use client";
-import Button from '@/app/[locale]/ui/Button/button';
+import { useRef } from "react";
+import { useTranslations, useLocale } from 'next-intl';
 import { Star } from 'lucide-react';
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import Button from '@/app/[locale]/ui/Button/button';
 import Float from "@/app/[locale]/ui/Float/Float"
+import { TextEffect } from '../../ui/LiquidEther/LiquidEther';
 import styles from './Hero.module.css';
-import { useTranslations } from 'next-intl';
+// import "./hero.scss"
 
 function Hero() {
-
-
-            const t = useTranslations('HomePage');
-
+    const t = useTranslations('Hero');
+    const locale = useLocale();
     const heroRef = useRef<HTMLElement>(null);
-
-    useEffect(() => {
-        if (heroRef.current) {
-            gsap.from(heroRef.current.children, {
-                y: -50,
-                opacity: 1,
-                duration: 0.6,
-                stagger: 0.1,
-                ease: "power2.out",
-            });
-        }
-    }, []);
-
-
     const badgeRef = useRef<HTMLDivElement>(null);
-
-    // useEffect(() => {
-    //     const timeout = setTimeout(() => {
-    //         if (badgeRef.current) {
-    //             gsap.to(badgeRef.current, {
-    //                 scale: 1.1,
-    //                 opacity: 1,
-    //                 duration: 1,
-    //                 yoyo: true,
-    //                 repeat: 1,
-    //                 ease: "power2.inOut",
-    //             });
-    //         }
-    //     }, 50);
-    //     return () => clearTimeout(timeout);
-    // }, []);
 
     const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId);
@@ -55,59 +24,70 @@ function Hero() {
     return (
         <section id="home" className={styles.hero} ref={heroRef}>
             <Float />
+            <div className={styles.background}>
+
+            </div>
             <div className={styles.content}>
                 <div className={styles.contentInner}>
                     <div ref={badgeRef} className={styles.badge}>
                         <Star className={styles.badgeIcon} fill="currentColor" />
-                        <span className={styles.badgeText}> Available for freelance work</span>
+                        <span className={styles.badgeText}>{t('badge')}</span>
                     </div>
 
-                    <h1 className={styles.title}>
-                        {/* Hello! Software Engineer Portfolio — Mina Gerguis */}
+                    <h1 className={`${styles.title} ${locale === "en" ? "title-en" : "title-ar"
+                        }`}>
                         {t('title')}
                     </h1>
 
-                    <p className={styles.subtitle}>
-                        Full Stack Developer & Creative Technologist building high-performance, visually engaging web experiences — combining design thinking, clean code, and modern frameworks to craft digital solutions that inspire and deliver real impact.
-                    </p>
+
+
+                    <TextEffect per='word' preset='blur' className={styles.subtitle}>
+                        {t('subtitle')}
+                    </TextEffect>
+
+
 
                     <div className={styles.stats}>
                         <div className={styles.statItem}>
                             <div className={styles.statValue}>50+</div>
-                            <div className={styles.statLabel}>Successful Web Projects</div>
+                            <div className={styles.statLabel}>{t('successfulWebProjects')}</div>
                         </div>
                         <div className={styles.statItem}>
                             <div className={styles.statValue}>90+</div>
-                            <div className={styles.statLabel}>Design Projects</div>
+                            <div className={styles.statLabel}>{t('successfulDesignProjects')}</div>
                         </div>
                         <div className={styles.statItem}>
                             <div className={styles.statValue}>3+</div>
-                            <div className={styles.statLabel}>Years of Experience</div>
+                            <div className={styles.statLabel}>{t('yearsOfExperience')}</div>
                         </div>
                     </div>
 
-                    <div className={styles.ctaButtons}>
-                        <Button
-                            variant="ios"
-                            size="iosLarge"
-                            onClick={() => scrollToSection('contact')}
-                        >
-                            Contact me
-                        </Button>
+                </div>
+                <div className={styles.ctaButtons}>
+                    <Button
+                        className={`${styles.but} ${locale === "en" ? "but-en" : "but-ar"
+                            }`}
+                        variant="ios"
+                        size="sm"
+                        onClick={() => scrollToSection('contact')}
+                    >
+                        {t('contactMe')}
+                    </Button>
 
-                        <Button
-                            variant="iosOutline"
-                            size="iosLarge"
-                            onClick={() => {
-                                const link = document.createElement('a');
-                                link.href = '/mycv.pdf';
-                                link.target = '_blanck'
-                                link.click();
-                            }}
-                        >
-                            Downlode cv
-                        </Button>
-                    </div>
+                    <Button
+                        className={`${styles.but} ${locale === "en" ? "but-en" : "but-ar"
+                            }`}
+                        variant="iosOutline"
+                        size="sm"
+                        onClick={() => {
+                            const link = document.createElement('a');
+                            link.href = '/mycv.pdf';
+                            link.target = '_blanck'
+                            link.click();
+                        }}
+                    >
+                        {t('downloadCV')}
+                    </Button>
                 </div>
             </div>
 

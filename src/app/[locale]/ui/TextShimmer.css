@@ -1,0 +1,39 @@
+.spinning-text-container {
+    position: relative;
+    /* إذا كنت تريد حجم معين للدائرة، يمكنك إضافة width + height أو inline-size */
+    /* مثال: */
+    /* width: 20rem; */
+    /* height: 20rem; */
+    /* أو اتركه يتكيف مع المحتوى */
+}
+
+.spinning-letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+
+    /* التحويل الأساسي موجود بالفعل في الـ inline style */
+    /* لكن يمكنك إضافة أي ستايل إضافي هنا إذا أردت (font-size, color, font-weight...) */
+}
+
+
+.spinning-letter {
+    font-size: .5rem;
+    font-weight: 600;
+    color: var(--item-color);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* لضمان أن النص مخفي بصريًا لكن موجود لقارئات الشاشة */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

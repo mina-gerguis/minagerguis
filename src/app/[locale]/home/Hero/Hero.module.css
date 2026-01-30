@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 .hero {
   position: relative;
   min-height: 100vh;
@@ -8,81 +7,35 @@
   background-color: var(--bg-color);
   overflow: hidden;
   padding: 0 2rem;
+  background-image: url('../../../../../public/text.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
 }
+
 @media (max-width: 650px) {
   .hero {
     padding: 8rem 2rem;
   }
 }
 
-.floatingElement1 {
-  position: absolute;
-  top: 80px;
-  right: 40px;
-  width: 64px;
-  height: 64px;
-  background: rgba(0, 122, 255, 0.2);
-  border-radius: 50%;
-  animation: float 4s ease-in-out infinite;
-}
-
-.floatingElement2 {
-  position: absolute;
-  bottom: 128px;
-  left: 64px;
-  width: 96px;
-  height: 96px;
-  background: rgba(0, 122, 255, 0.1);
-  border-radius: 50%;
-  animation: float 4s ease-in-out infinite 1s;
-}
-
-.floatingElement3 {
-  position: absolute;
-  top: 33%;
-  left: 40px;
-  width: 32px;
-  height: 32px;
-  background: rgba(17, 0, 255, 0.342);
-  border-radius: 50%;
-  animation: float 4s ease-in-out infinite 2s;
-}
-
-.floatingElement4 {
-  position: absolute;
-  top: 83%;
-  right: 67px;
-  width: 32px;
-  height: 32px;
-  background: rgba(0, 122, 255, 0.2);
-  border-radius: 50%;
-  animation: float 4s ease-in-out infinite 2s;
-}
-
-.floatingElement5 {
-  position: absolute;
-  top: 10%;
-  left: 30%;
-  width: 50px;
-  height: 50px;
-  background: rgba(17, 0, 255, 0.342);
-  border-radius: 50%;
-  animation: float 4s ease-in-out infinite 1s;
-}
-
 .content {
   position: relative;
   z-index: 10;
-  max-width: 1200px;
+  max-width: 60%;
   margin: 0 auto;
   padding: 0 24px;
   text-align: center;
 }
-.content .contentInner {
-  max-width: 900px;
+
+.contentInner {
+  max-width: 90%;
   margin: 0 auto;
 }
-.content .contentInner .badge {
+
+.badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -90,69 +43,72 @@
   border: 1px solid rgba(0, 122, 255, 0.2);
   padding: 8px 16px;
   border-radius: 50px;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
-.content .contentInner .badge .badgeIcon {
+
+.badgeIcon {
   width: 16px;
   height: 16px;
   color: var(--ios-blue);
 }
-.content .contentInner .badge .badgeText {
-  /* font-family: "plus"; */
+
+.badgeText {
   font-size: 12px;
   font-weight: 500;
   color: var(--item-color);
 }
-.content .contentInner .title {
-  /* font-family: "Playfair Display", serif; */
-  font-size: 60px;
-  font-weight: 800;
+
+.title {
+  font-size: 7em;
+  line-height: 1.232;
+  font-weight: 600;
   color: var(--item-color);
-  padding: 0 2rem;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
   animation: slideUp 0.6s ease-out;
 }
+
 @media (max-width: 800px) {
-  .content .contentInner .title {
+  .title {
     line-height: 0.9;
   }
 }
-.content .contentInner .subtitle {
-  /* font-family: "Plus", sans-serif; */
+
+.subtitle {
   font-size: 18px;
   color: var(--color-muted);
   margin-bottom: 32px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
   line-height: 1.6;
   animation: slideUp 0.6s ease-out 0.2s backwards;
 }
-.content .contentInner .stats {
+
+.stats {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 32px;
   margin-bottom: 40px;
   animation: slideUp 0.6s ease-out 0.4s backwards;
-  font-family: "Plus", sans-serif;
   color: var(--color-muted);
 }
-.content .contentInner .stats .statItem {
+
+.statItem {
   text-align: center;
 }
-.content .contentInner .stats .statItem .statValue {
+
+.statValue {
   font-size: 24px;
   font-weight: 600;
   color: var(--color-ios-blue);
   margin-bottom: 4px;
 }
-.content .contentInner .stats .statItem .statLabel {
-  font-size: 16px;
+
+.statLabel {
+  font-size: 14px;
   font-weight: 600;
   color: var(--color-muted-foreground);
 }
-.content .contentInner .ctaButtons {
+
+.ctaButtons {
   display: flex;
   flex-direction: row-reverse;
   gap: 16px;
@@ -168,7 +124,8 @@
   transform: translateX(-50%);
   animation: bounce 2s ease-in-out infinite;
 }
-.scrollIndicator .scrollIndicatorInner {
+
+.scrollIndicatorInner {
   width: 24px;
   height: 40px;
   border: 2px solid rgba(58, 58, 60, 0.3);
@@ -176,7 +133,8 @@
   display: flex;
   justify-content: center;
 }
-.scrollIndicator .scrollIndicatorInner .scrollIndicatorDot {
+
+.scrollIndicatorDot {
   width: 4px;
   height: 12px;
   background: rgba(58, 58, 60, 0.3);
@@ -185,29 +143,88 @@
   animation: pulse 2s ease-in-out infinite;
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-  25% {
-    transform: translateY(-15px) translateX(10px);
-  }
-  50% {
-    transform: translateY(0) translateX(0);
-  }
-  75% {
-    transform: translateY(15px) translateX(-10px);
-  }
-  100% {
-    transform: translateY(0) translateX(0);
-  }
-}
+
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
+
   50% {
     transform: translateX(-50%) translateY(-10px);
   }
 }
 
+@media (max-width: 1700px) {
+  .hero {
+    padding: 8rem 2rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .content {
+    max-width: 90%;
+  }
+
+  .contentInner {
+    max-width: 100%;
+  }
+
+  .title {
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    max-width: 100%;
+  }
+
+  .title {
+    line-height: 1.2;
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 400px) {
+  .content {
+    padding: 0 2px;
+  }
+
+  .badge {
+    padding: 8px 10px;
+  }
+
+  .badgeIcon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .badgeText {
+    font-size: 10px;
+  }
+
+  .title {
+    font-size: 3em;
+    line-height: 1.1;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .ctaButtons {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    animation: scaleIn 0.6s ease-out 0.6s backwards;
+  }
+
+  .but {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}

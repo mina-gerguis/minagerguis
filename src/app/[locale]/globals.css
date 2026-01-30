@@ -62,12 +62,31 @@ li {
   font-family: 'Tajawal';
   src: url('../../../public/font/Tajawal.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../../../public/font/PlayfairDisplay.ttf') format('truetype');
+}
+
 .ar-font {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Cairo', sans-serif;
 }
+
 .en-font {
-  font-family: 'Xeroda', sans-serif;
+  font-family: 'Plus', sans-serif;
 }
+
+.title-ar {
+  font-family: "Cairo", sans-serif;
+}
+
+.title-en {
+  font-family: "Playfair Display", sans-serif;
+}
+.but-ar {
+  font-family: "Cairo", sans-serif;
+}
+
 :root {
   --font-title-size: 2.5rem;
   --ios-blue: #007AFF;

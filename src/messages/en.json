@@ -1,5 +1,12 @@
 {
-    "HomePage": {
-        "title": "Hello! Software Engineer Portfolio — Mina Gerguis"
+    "Hero": {
+        "badge": "Available for freelance work",
+        "title": "Hello! Software Engineer Portfolio — Mina Gerguis",
+        "subtitle": "Full Stack Developer & Creative Technologist building high-performance, visually engaging web experiences — combining design thinking, clean code, and modern frameworks to craft digital solutions that inspire and deliver real impact.",
+        "successfulWebProjects": "Successful Web Projects",
+        "successfulDesignProjects": "Design Projects",
+        "yearsOfExperience": "Years of Experience",
+        "contactMe": "Contact me",
+        "downloadCV": "Download CV"
     }
 }

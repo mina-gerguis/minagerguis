@@ -7,7 +7,7 @@ import BubbleMenu from "@/app/[locale]/ui/BubbleMenu/BubbleMenu";
 import Hero from '@/app/[locale]/home/Hero/Hero';
 import About from "@/app/[locale]/components/About/About";
 import Skills from "@/app/[locale]/components/skills/Skills";
-import SplashCursor from "@/lib/SplashCursor";
+// import SplashCursor from "@/lib/SplashCursor";
 import Projects from "@/app/[locale]/components/Projects/Projects";
 import Certificates from "@/app/[locale]/components/Certificates/Certificates";
 import Content from "@/app/[locale]/components/content/content"
@@ -57,7 +57,7 @@ export default function Home() {
   ];
   return (
     <>
-      <SplashCursor />
+      {/* <SplashCursor /> */}
       <Navbar />
       <Hero />
       <About />
