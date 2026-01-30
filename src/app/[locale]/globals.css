@@ -1,0 +1,125 @@
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--hover-color);
+  color: var(--ios-blue);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-color);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* Font */
+@font-face {
+  font-family: 'Xeroda';
+  src: url('../../../public/font/Xeroda.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('../../../public/font/Cairo.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Plus';
+  src: url('../../../public/font/PlusJakartaSans.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ReadexPro';
+  src: url('../../../public/font/ReadexPro.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url('../../../public/font/Tajawal.ttf') format('truetype');
+}
+.ar-font {
+  font-family: 'Tajawal', sans-serif;
+}
+.en-font {
+  font-family: 'Xeroda', sans-serif;
+}
+:root {
+  --font-title-size: 2.5rem;
+  --ios-blue: #007AFF;
+  --ios-blue-alpha: #008cff34;
+  --ios-blue-alpha-2: #5d55c225;
+  --color-muted: #737373;
+  --color-muted-2: #070101a9;
+  --blue: #0000ff;
+  --white: white;
+}
+
+body {
+  --bg-color: #ffffff;
+  --item-color: #000000;
+  --hover-color: #0070f31a;
+  --navbar: hsla(0, 0%, 98%, 0.451);
+  --menu: #007AFF;
+  --span: #0004ff;
+  --button: #007AFF;
+  --border: hsla(223, 84%, 5%, 0.103);
+  --color-muted-3: #e7e7e7;
+  --color-muted-4: #000000;
+  --accent: #008cff;
+  --glass-background: #fafafa73;
+  --glass-border: rgba(133, 133, 133, 0.589);
+  --card-color: rgba(0, 0, 0, 0.0);
+  --card-border: rgba(194, 194, 194, 0.589);
+  --card-hover: #0070f31a;
+  --container-color: #f0f1ff;
+  --card-linear: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  --text-gradient: linear-gradient(90deg, rgb(0, 0, 0), rgb(116, 111, 111));
+}
+
+body.dark {
+  --bg-color: rgb(2, 8, 23);
+  --item-color: #ffffff;
+  --hover-color: #0726b341;
+  --navbar: hsla(223, 84%, 5%, 0.603);
+  --color-muted-3: #000000;
+  --menu: #1b08ccb2;
+  --span: #15ff00;
+  --border: hsla(220, 2%, 73%, 0.103);
+  --color-muted-4: #bbbbbb;
+  --accent: #fbff00;
+  --glass-background: rgba(14, 6, 43, 0.233);
+  --glass-border: rgba(20, 35, 66, 0.712);
+  --card-color: rgba(225, 225, 225, 0.03);
+  --card-border: rgba(7, 1, 44, 0.589);
+  --container-color: #05050c;
+  --card-linear: linear-gradient(to left top, #000000c4, #001130);
+  --text-gradient: linear-gradient(90deg, rgb(160, 158, 158), rgb(59, 59, 59));
+}
+
+
+
