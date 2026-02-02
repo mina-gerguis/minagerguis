@@ -1,6 +1,6 @@
 "use client";
-
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import styles from "./Skills.module.css";
 import {
     FaReact,
@@ -37,6 +37,7 @@ import {
 } from "react-icons/si";
 
 const Skills = () => {
+    const t = useTranslations('Skills');
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
 
@@ -88,13 +89,13 @@ const Skills = () => {
     const repeatedDevSkills = [...devSkills, ...devSkills, ...devSkills];
 
     return (
-        <section ref={sectionRef} id="skills" className={styles.section}>
+        <section dir="ltr" ref={sectionRef} id="skills" className={styles.section}>
             <div className={styles.container}>
                 <h2
                     className={`${styles.title} ${isVisible ? styles.visible : styles.hidden
                         }`}
                 >
-                    Skills & Technologies
+                    {t('title')}
                 </h2>
 
                 <div className={styles.sliderWrapper}>
@@ -107,10 +108,6 @@ const Skills = () => {
                         ))}
                     </div>
                 </div>
-
-
-
-
             </div>
         </section>
     );

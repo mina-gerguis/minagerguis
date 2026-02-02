@@ -67,12 +67,8 @@
     color: var(--item-color);
     display: flex;
     gap: 2rem;
-    animation: slideRight 100s linear infinite;
+    animation: slideRight 50s linear infinite;
     width: fit-content;
-}
-
-.sliderTrack:hover {
-    animation-play-state: paused;
 }
 
 @keyframes slideRight {
@@ -96,18 +92,12 @@
     cursor: pointer;
 }
 
-
-.skillCard:hover {
-    transform: translateY(-5px) scale(1.05);
-    color: var(--accent);
-}
-
 .skillIcon {
     font-size: 35px;
 }
 
 .skillName {
     font-size: 1rem;
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: "Plus", sans-serif;
     font-weight: 600;
 }

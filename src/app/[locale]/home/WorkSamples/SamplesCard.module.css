@@ -1,0 +1,152 @@
+.heroContainer {
+    height: 300vh;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    font-family: system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.headerWrapper {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    position: relative;
+    width: 100%;
+    top: 0;
+}
+
+@media (min-width: 768px) {
+    .headerWrapper {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+}
+
+.mainTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--item-color);
+    line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+    .mainTitle {
+        font-size: 4.5rem;
+    }
+}
+
+.description {
+    max-width: 32rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: var(--color-muted);
+}
+
+@media (min-width: 768px) {
+    .description {
+        font-size: 1.25rem;
+    }
+}
+
+.row {
+    display: flex;
+    margin-bottom: 5rem;
+    gap: 5rem;
+}
+
+.rowReverse {
+    flex-direction: row-reverse;
+    gap: 5rem;
+}
+
+.itemCard {
+    height: 20rem;
+    width: 30rem;
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    border-radius: .64em;
+}
+
+.itemCard:hover {
+    transform: translateY(-20px);
+    border-radius: 64em;
+    
+}
+
+.itemLink {
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: box-shadow 0.4s ease;
+}
+
+.itemLink:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+    border-radius: .64em;
+}
+
+.itemImage {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left top;
+    border-radius: .62em;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.548);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    border-radius: .62em;
+}
+
+.itemCard:hover .overlay {
+    opacity: 0.8;
+}
+
+.titleOverlay {
+    position: absolute;
+    bottom: 4rem;
+    left: 1rem;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.desOverlay {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 1rem;
+    color: white;
+    font-size: .90rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.itemCard:hover .titleOverlay,
+.itemCard:hover .desOverlay {
+    opacity: 1;
+}

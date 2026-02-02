@@ -5,10 +5,10 @@
 import Navbar from "@/app/[locale]/components/Navbar/Navbar";
 import BubbleMenu from "@/app/[locale]/ui/BubbleMenu/BubbleMenu";
 import Hero from '@/app/[locale]/home/Hero/Hero';
-import About from "@/app/[locale]/components/About/About";
-import Skills from "@/app/[locale]/components/skills/Skills";
+import About from "@/app/[locale]/home/About/About";
+import Skills from "@/app/[locale]/home/skills/Skills";
 // import SplashCursor from "@/lib/SplashCursor";
-import Projects from "@/app/[locale]/components/Projects/Projects";
+import { WorkSamples } from "@/app/[locale]/home/WorkSamples/WorkSample";
 import Certificates from "@/app/[locale]/components/Certificates/Certificates";
 import Content from "@/app/[locale]/components/content/content"
 import Footer from "@/app/[locale]/components/Footer/Footer"
@@ -62,7 +62,7 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
-      <Projects />
+      <WorkSamples />
       <Certificates />
       <Content />
       <Footer />

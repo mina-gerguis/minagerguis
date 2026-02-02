@@ -1,35 +1,29 @@
 'use client';
 import { CheckCircle2 } from "lucide-react";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from './About.module.css';
 import { gsap } from "gsap";
-import { FaRegChessKing } from "react-icons/fa6";
-import { IoFlaskOutline } from "react-icons/io5";
-
+import { useTranslations, useLocale } from "next-intl";
 
 const About = () => {
+    const t = useTranslations('About');
+    const locale = useLocale();
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
 
+    const iconRef = useRef<HTMLSpanElement>(null);
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
+                if (entry.isIntersecting) setIsVisible(true);
             },
             { threshold: 0.1 }
         );
 
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
+        if (sectionRef.current) observer.observe(sectionRef.current);
         return () => observer.disconnect();
     }, []);
 
-
-    const iconRef = useRef<HTMLSpanElement>(null);
     useEffect(() => {
         if (!iconRef.current) return;
 
@@ -59,39 +53,28 @@ const About = () => {
     return (
         <section ref={sectionRef} id="about" className={styles.section}>
             <div className={styles.container}>
-                <div className={styles.maxWidth}>
-                    <h2 className={`${styles.title} ${isVisible ? styles.visible : styles.hidden}`}>
-                        About Me
+                <div className={styles.containerInner}>
+                    {/* Main Title */}
+                    <h2 className={`${styles.mainTitle} ${locale === "en" ? "mainTitle-en" : "mainTitle-ar"
+                        } ${isVisible ? styles.visible : styles.hidden
+                        }`}>
+                        {t('title')}
                     </h2>
-
-                    <div className={`${styles.content} ${isVisible ? styles.visible : styles.hidden}`}>
-                        <p className={styles.intro}>
-                            I am passionate about combining creativity with technology to help individuals and businesses build a strong digital presence.
-                            I have experience building websites using HTML, CSS, and JavaScript, as well as modern libraries and tools like React, Node.js, SCSS, and Bootstrap to create responsive and dynamic web applications, from simple personal sites to complex platforms.
-                            <br />
-                            <br />
-                            My expertise extends to graphic design, using Photoshop and Illustrator to design logos, visual identities, and marketing materials that reflect a brand’s essence. I am also skilled in video editing, producing visually engaging content that enhances storytelling and brand communication.
-                            <br />
-                            <br />
-
-                            In UI/UX design, I focus on creating user-friendly and engaging interfaces, guided by a deep understanding of user needs. Additionally, I produce high-quality marketing and technical content, optimize it for SEO, and manage social media campaigns to boost engagement and reach.
-                            <br />
-                            <br />
-
-                            I have strong skills in data analysis and reporting, working with Excel and Google Sheets to extract valuable insights, and using Google Data Studio and Power BI to create clear, data-driven dashboards.
-                            <br />
-                            <br />
-
-                            I am passionate about education and training, offering workshops and courses in web development, design, and digital skills. My commitment to continuous learning ensures I stay up to date with the latest technologies to deliver the best results for my clients.
-                        </p>
-
-                        <h3 className={styles.subtitle}><span style={{ display: "inline-block" }} ref={iconRef2}><IoFlaskOutline />
-                        </span>Technical Skills</h3>
-
+                    {/* Info Section */}
+                    <div className={styles.info}>
+                        <p>{t('p1')}</p>
+                        <p>{t('p2')}</p>
+                        <p>{t('p3')}</p>
+                        <p>{t('p4')}</p>
+                        <p>{t('p5')}</p>
+                    </div>
+                    {/* Skills Section */}
+                    <div className={styles.skills}>
+                        <h3 className={`${styles.skillsTitle} ${locale === "en" ? "mainTitle-en" : "mainTitle-ar"}`}>{t('skillsTitle')}</h3>
 
                         <div className={styles.skillsGrid}>
                             <div className={styles.skillCategory}>
-                                <h4 className={styles.categoryTitle}>Frontend Development</h4>
+                                <h4 className={styles.categoryTitle}>{t('skillsItem1')}</h4>
                                 <ul className={styles.skillList}>
                                     <li className={styles.skillItem}>
                                         <CheckCircle2 className={styles.bullet} />
@@ -113,7 +96,7 @@ const About = () => {
                             </div>
 
                             <div className={styles.skillCategory}>
-                                <h4 className={styles.categoryTitle}>Backend Development</h4>
+                                <h4 className={styles.categoryTitle}>{t('skillsItem2')}</h4>
                                 <ul className={styles.skillList}>
                                     <li className={styles.skillItem}>
                                         <CheckCircle2 className={styles.bullet} />
@@ -121,35 +104,33 @@ const About = () => {
                                     </li>
                                     <li className={styles.skillItem}>
                                         <CheckCircle2 className={styles.bullet} />
-                                        <span>MongoDB & PostgreSQL</span>
+                                        <span>RESTful API Design</span>
                                     </li>
                                     <li className={styles.skillItem}>
                                         <CheckCircle2 className={styles.bullet} />
-                                        <span>RESTful API Design</span>
+                                        <span>Git & Github</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-
-
-
-                        <h3 className={styles.subtitle}>
-                            <span style={{ display: "inline-block" }} ref={iconRef}><FaRegChessKing /></span> Experience
-                        </h3>
+                    </div>
+                    {/* Experience Section */}
+                    <div>
+                        <h3 className={`${styles.skillsTitle} ${locale === "en" ? "mainTitle-en" : "mainTitle-ar"}`}>{t('ExpTitle')}</h3>
 
                         <div className={styles.timeline}>
                             <div className={styles.timelineItem}>
                                 <div className={styles.timelineDot}></div>
                                 <div className={styles.timelineCard}>
                                     <div className={styles.cardHeader}>
-                                        <h4 className={styles.cardTitle}>Website Development — Sprints</h4>
+                                        <h4 className={styles.cardTitle}>{t('Exp1.title')}</h4>
                                         <span className={styles.cardDate}>2024 ( 5 Months )</span>
                                     </div>
                                     <div className={styles.cardType}>
-                                        <span>Training</span>
+                                        <span>{t('Exp1.type')}</span>
                                     </div>
                                     <p className={styles.cardDescription}>
-                                        Completed an intensive training program focused on practical web development and real-world project implementation.
+                                        {t('Exp1.des')}
                                     </p>
                                     <div className={styles.cardSkills}>
                                         <span style={{ marginLeft: "0", background: "#c53800" }}>Html</span>
@@ -164,37 +145,36 @@ const About = () => {
                                 <div className={styles.timelineDot}></div>
                                 <div className={styles.timelineCard}>
                                     <div className={styles.cardHeader}>
-                                        <h4 className={styles.cardTitle}>UI/UX Designer — Sprints</h4>
+                                        <h4 className={styles.cardTitle}>{t('Exp2.title')}</h4>
                                         <span className={styles.cardDate}>2024 ( 2 Months )</span>
                                     </div>
                                     <div className={styles.cardType}>
-                                        <span>Training</span>
+                                        <span>{t('Exp2.type')}</span>
                                     </div>
                                     <p className={styles.cardDescription}>
-                                        Worked on designing intuitive user interfaces and enhancing user experience for web-based products within the development team.
+                                        {t('Exp2.des')}
                                     </p>
                                     <div className={styles.cardSkills}>
                                         <span style={{ marginLeft: "0", background: "#0011F8FF" }}>User Interface (UI)</span>
-                                        <span style={{ background: "#FF00F2FF" }}>User Experience (UX)</span>
+                                        <span style={{ background: "#0066FF" }}>User Experience (UX)</span>
                                         <span style={{ background: "#FF0000" }}>Visual Design</span>
-                                        <span style={{ background: "#004E00FF" }}>Figma</span>
+                                        <span style={{ background: "#CE0CCE" }}>Figma</span>
                                     </div>
                                 </div>
                             </div>
-
 
                             <div className={styles.timelineItem}>
                                 <div className={styles.timelineDot}></div>
                                 <div className={styles.timelineCard}>
                                     <div className={styles.cardHeader}>
-                                        <h4 className={styles.cardTitle}>Frontend Developer — ITI</h4>
+                                        <h4 className={styles.cardTitle}>{t('Exp3.title')}</h4>
                                         <span className={styles.cardDate}>2024 - 2025</span>
                                     </div>
                                     <div className={styles.cardType}>
-                                        <span>Training</span>
+                                        <span>{t('Exp3.type')}</span>
                                     </div>
                                     <p className={styles.cardDescription}>
-                                        Developed responsive and accessible user interfaces using React and modern CSS.
+                                        {t('Exp3.des')}
                                     </p>
                                     <div className={styles.cardSkills}>
                                         <span style={{ marginLeft: "0", background: "#c53800" }}>HTML5</span>
@@ -210,14 +190,14 @@ const About = () => {
                                 <div className={styles.timelineDot}></div>
                                 <div className={styles.timelineCard}>
                                     <div className={styles.cardHeader}>
-                                        <h4 className={styles.cardTitle}>Professional Foundations — Alx</h4>
+                                        <h4 className={styles.cardTitle}>{t('Exp4.title')}</h4>
                                         <span className={styles.cardDate}>2025 ( 3 Months )</span>
                                     </div>
                                     <div className={styles.cardType}>
-                                        <span>Training</span>
+                                        <span>{t('Exp4.type')}</span>
                                     </div>
                                     <p className={styles.cardDescription}>
-                                        I completed the ALX Foundations Program, which helped me develop essential skills for professional work environments.
+                                        {t('Exp4.des')}
                                     </p>
                                     <div className={styles.cardSkills}>
                                         <span style={{ marginLeft: "0", background: "#FF0000" }}>Growth Mindset</span>

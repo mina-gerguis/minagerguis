@@ -8,5 +8,46 @@
         "yearsOfExperience": "Years of Experience",
         "contactMe": "Contact me",
         "downloadCV": "Download CV"
+    },
+    "About": {
+        "title": "About Me",
+        "p1": "I love creativity in my work, and I use my skills to build a strong digital presence, helping individuals and companies achieve a distinctive and unique position in the market and online. I have experience in designing and developing websites using HTML, CSS, and JavaScript, and I use advanced libraries and tools such as React.js, TypeScript, Next.js, Node.js, SCSS & SASS, Tailwind CSS, Bootstrap CSS, and other skills that enable me to create fast websites with outstanding user interfaces (UI) that are optimized for search engines (SEO) and fully responsive across all devices and screen sizes.",
+        "p2": "My expertise extends beyond web development to include graphic design. I utilize tools like Adobe Photoshop and Adobe Illustrator to create professional logos, comprehensive visual identities, and marketing materials that reflect the brand's personality and clearly and effectively communicate its message. I also possess extensive experience in video editing and production, creating visually engaging content that helps individuals and businesses present themselves more effectively across social media and various platforms. This contributes to strengthening the brand's storytelling and enhancing audience engagement in a modern and impactful way.",
+        "p3": "In UI/UX design, I always focus on creating user interfaces that are easy and simple to use while also being visually appealing and professional. This is based on a deep understanding of what users need and how they interact with the website or application. I successfully work on the user experience in a way that makes my approach clear and intuitive, so the user feels comfortable with the design at every step. In addition, I have experience producing high-quality marketing and technical content for websites and digital projects, ensuring it is optimized for search engines (SEO) to improve visibility and increase reach. I also manage social media and digital marketing campaigns, aiming to enhance audience engagement and expand brand awareness effectively.",
+        "p4": "I have advanced skills in data analysis and reporting, and I know how to use tools like Excel and Google Sheets to extract valuable information and insights that help in making better decisions. I also use platforms like Google Data Studio and Power BI to create clear and organized dashboards that display numbers and results in an easy-to-understand way.",
+        "p5": "In addition, I have a strong passion for education and training, and I offer workshops and courses in web development and design and digital skills in general to help individuals develop their skills and successfully enter this field. My commitment to continuous learning ensures I stay up-to-date with the latest technologies and developments, enabling me to deliver the best quality and results for my clients.",
+        "skillsTitle": "My Skills",
+        "skillsItem1": "Frontend Development",
+        "skillsItem2": "Backend Development",
+        "ExpTitle": "Experience",
+        "Exp1": {
+            "title": "Website Development — Sprints",
+            "des": "Completed an intensive training program focused on practical web development and real-world project implementation.",
+            "type": "Training"
+        },
+        "Exp2": {
+            "title": "UI/UX Designer — Sprints",
+            "des": "Worked on designing intuitive user interfaces and enhancing user experience for web-based products within the development team.",
+            "type": "Training"
+        },
+        "Exp3": {
+            "title": "Frontend Developer — ITI",
+            "des": "Developed responsive and accessible user interfaces using React and modern CSS",
+            "type": "Training"
+        },
+        "Exp4": {
+            "title": "Professional Foundations — Alx",
+            "des": "I completed the ALX Foundations Program, which helped me develop essential skills for professional work environments.",
+            "type" : "Training"
+        }
+    },
+    "Skills": {
+        "title" : "Skills & Technologies"
+    },
+    "Projects": {
+        "title1": "Some of",
+        "title2": "my development projects",
+        "des1": "Programming and design projects that I have created and developed",
+        "des2": "Web development - Video editing - Design - Data analysis - User interfaces and more"
     }
 }

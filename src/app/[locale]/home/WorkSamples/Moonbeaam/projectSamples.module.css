@@ -1,0 +1,516 @@
+.section {
+    padding: 80px 0px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    background: none;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.headSection {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.mainTitle {
+    font-family: 'Xeroda';
+    font-size: var(--font-title-size);
+    color: var(--item-color);
+    margin: 0.5rem 0;
+}
+
+.secondTitle {
+    font-family: "Plus";
+    color: var(--color-muted);
+}
+
+.container {
+    padding: 0 2rem;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.samplesCard {
+    flex: 0 0 400px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--glass-background);
+    border: 1px solid var(--glass-border);
+    border-radius: 7px;
+    height: auto;
+    padding: 2rem 1.5rem;
+}
+
+.samplesImageContainer {
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00000010;
+}
+
+.samplesImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.samplesTitleCard {
+    font-family: "Xeroda";
+    color: var(--item-color);
+    font-size: 20px;
+    margin: 1rem 0 .5rem 0;
+}
+
+.samplesDetailsCard {
+    font-family: "Plus";
+    margin: .5rem 0;
+    color: var(--color-muted);
+    display: -webkit-box;
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.samplesSkillsCard {
+    margin: 1rem 0;
+}
+
+.samplesSkillsCard span {
+    display: inline-block;
+    margin: 0 3px;
+    background: var(--ios-blue-alpha-2);
+    border: 1px solid var(--glass-border);
+    color: var(--item-color);
+    padding: .3rem .4rem;
+    font-family: "Plus";
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.samplesSkillsCard span:nth-child(1) {
+    margin: 0 0px 0 0;
+}
+
+.samplesSkillsCard span:nth-child(n+5) {
+    display: none;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between
+}
+
+.button a {
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: "Plus";
+    font-weight: 600;
+    text-align: center;
+    transition: all .2s ease-in;
+    width: 48%;
+}
+
+.live {
+    background: var(--ios-blue);
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    gap: 10;
+}
+
+.github {
+    background: var(--ios-blue-alpha);
+    color: var(--item-color);
+    display: flex;
+    justify-content: center;
+    gap: 10;
+}
+
+/*========================
+    OPEN CARD
+========================*/
+.dialogContent {
+    width: 95% !important;
+    max-height: 95vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: var(--card-linear);
+    backdrop-filter: blur(10px);
+    padding: 30px 50px;
+    border-radius: 9px;
+    z-index: 9999;
+    overflow-y: auto;
+    animation: fadeIn 0.3s ease;
+    scrollbar-width: thin;
+    scrollbar-color: var(--item-color) transparent;
+    box-shadow: rgba(0, 0, 0, 0.356) 5px 10px 50px, rgb(0, 0, 0, 0.7) -5px 0px 250px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dialogTitle {
+    font-family: 'Xeroda';
+    font-size: var(--font-title-size);
+    color: var(--item-color);
+    text-align: center;
+}
+
+.dialogBody {
+    padding: 20px 0;
+    width: 90%;
+    margin: 0 auto
+}
+
+.image {
+    background-color: rgba(3, 0, 0, 0.39);
+    padding: 3px;
+    margin: 1.5rem auto;
+    display: flex;
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dialogAssets {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00000010;
+}
+
+.assetsImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.dialogInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dialogInfoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1;
+}
+
+.dialogInfoItem strong {
+    font-family: 'Xeroda';
+    color: var(--item-color);
+    font-size: 1.4rem;
+}
+
+.dialogInfoItem span,
+.dialogInfoItem p {
+    color: var(--color-muted);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Plus";
+    line-height: 1.7;
+    margin-bottom: 6px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-x: hidden;
+}
+
+.skills {
+    overflow: hidden;
+    height: auto;
+}
+
+.skills span:nth-child(1) {
+    margin: 0 0px 0 0;
+}
+
+.skills span {
+    display: inline-block;
+    margin: 0 3px;
+    background: var(--ios-blue-alpha-2);
+    border: 1px solid var(--glass-border);
+    color: var(--item-color);
+    padding: .3rem .4rem;
+    font-family: "Plus";
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.butLink {
+    display: flex;
+    justify-content: space-between
+}
+
+.butLink a {
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: "Plus";
+    font-weight: 600;
+    text-align: center;
+    transition: all .2s ease-in;
+    width: 49%;
+}
+
+.link:hover {
+    background-color: var(--ios-blue-alpha);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/*================================
+    Media Screen
+=================================*/
+@media (max-width: 1400px) {
+    .dialogContent {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .dialogContent {
+        width: 90% !important;
+        max-height: 90vh;
+        padding: 30px 20px;
+    }
+
+    .image {
+        padding: 3px;
+        margin: 1.5rem auto;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+
+    .dialogTitle {
+        font-size: 2rem;
+    }
+
+    .dialogInfoItem strong {
+        font-size: 1.2rem;
+    }
+
+    .dialogInfoItem span,
+    .dialogInfoItem p {
+        font-size: .8rem;
+    }
+
+    .link {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .mainTitle {
+        font-size: 30px
+    }
+
+    .secondTitle {
+        font-size: 16px;
+    }
+
+    .content {
+        gap: 20px;
+    }
+
+    .samplesImageContainer {
+        height: 200px;
+        border-radius: 5px;
+    }
+
+    .samplesImage {
+        border-radius: 5px;
+    }
+
+    .samplesTitleCard {
+        font-size: 18px;
+    }
+
+    .samplesDetailsCard {
+        font-size: 16px;
+    }
+
+    .samplesSkillsCard span {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .button a {
+        padding: 7px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .samplesCard {
+        flex: 0 0 280px;
+    }
+
+    .samplesImageContainer {
+        height: 1%;
+        border-radius: 5px;
+    }
+
+    .samplesImage {
+        border-radius: 5px;
+    }
+
+    .samplesTitleCard {
+        font-size: 16px;
+    }
+
+    .samplesDetailsCard {
+        font-size: 14px;
+    }
+
+    .samplesSkillsCard span {
+        font-size: 11px;
+        font-weight: 500;
+    }
+
+    .dialogContent {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .dialogBody {
+        padding: 10px 0;
+        width: 99%;
+    }
+
+    .image {
+        padding: 8px;
+        margin-bottom: 1rem;
+    }
+
+    .dialogTitle {
+        font-size: 1.6rem;
+    }
+
+    .dialogInfoItem strong {
+        font-size: 1.1rem;
+    }
+
+    .dialogInfoItem span,
+    .dialogInfoItem p {
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 300px) {
+
+    .mainTitle {
+        font-size: 24px
+    }
+
+    .secondTitle {
+        font-size: 14px;
+    }
+
+    .samplesCard {
+        padding: 20px 15px;
+        flex: 0 0 110%;
+    }
+
+    .samplesTitleCard {
+        font-size: 14px;
+    }
+
+    .samplesDetailsCard {
+        font-size: 12px;
+    }
+
+    .samplesSkillsCard span {
+        font-size: 10px;
+        font-weight: 300;
+    }
+
+    .samplesImageContainer {
+        height: 150px;
+    }
+
+    .samplesImage {
+        border-radius: 2px !important;
+    }
+
+    .button a {
+        padding: 4% 1px;
+        font-size: 10px;
+    }
+
+    .icon {
+        font-size: 10px !important;
+    }
+
+    .dialogContent {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .dialogBody {
+        padding: 10px 0;
+        width: 99%;
+    }
+
+    .image {
+        padding: 8px;
+        margin-bottom: 1rem;
+    }
+
+    .dialogTitle {
+        font-size: 1.6rem;
+    }
+
+    .dialogInfoItem strong {
+        font-size: 1.1rem;
+    }
+
+    .dialogInfoItem span,
+    .dialogInfoItem p {
+        font-size: .7rem;
+    }
+
+    .butLink a {
+        padding: 10px 0;
+    }
+}

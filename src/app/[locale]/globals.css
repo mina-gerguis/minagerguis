@@ -68,12 +68,19 @@ li {
   src: url('../../../public/font/PlayfairDisplay.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'The';
+  src: url('../../../public/font/TheYearofHandicrafts-Regular.otf') format('opentype');
+}
+
 .ar-font {
   font-family: 'Cairo', sans-serif;
+  direction: rtl;
 }
 
 .en-font {
   font-family: 'Plus', sans-serif;
+  direction: ltr;
 }
 
 .title-ar {
@@ -87,20 +94,32 @@ li {
   font-family: "Cairo", sans-serif;
 }
 
+.mainTitle-en {
+  font-family: "Xeroda", sans-serif;
+}
+
+.mainTitle-ar {
+  font-family: "The", sans-serif;
+}
+
 :root {
   --font-title-size: 2.5rem;
-  --ios-blue: #007AFF;
+  --ios-blue: hsl(211, 100%, 50%);
   --ios-blue-alpha: #008cff34;
   --ios-blue-alpha-2: #5d55c225;
-  --color-muted: #737373;
   --color-muted-2: #070101a9;
-  --blue: #0000ff;
+  --blue: hsl(240, 100%, 50%);
   --white: white;
 }
 
 body {
-  --bg-color: #ffffff;
-  --item-color: #000000;
+  --bg-color: hsl(0, 0%, 100%);
+  --item-color: hsl(0, 0%, 0%);
+  --color-muted: hsl(0, 0%, 28%);
+  --accent: hsl(211, 100%, 50%);
+
+
+
   --hover-color: #0070f31a;
   --navbar: hsla(0, 0%, 98%, 0.451);
   --menu: #007AFF;
@@ -109,7 +128,6 @@ body {
   --border: hsla(223, 84%, 5%, 0.103);
   --color-muted-3: #e7e7e7;
   --color-muted-4: #000000;
-  --accent: #008cff;
   --glass-background: #fafafa73;
   --glass-border: rgba(133, 133, 133, 0.589);
   --card-color: rgba(0, 0, 0, 0.0);
@@ -121,8 +139,12 @@ body {
 }
 
 body.dark {
-  --bg-color: rgb(2, 8, 23);
-  --item-color: #ffffff;
+  --bg-color: hsl(225, 89%, 4%);
+  --item-color: hsl(0, 0%, 100%);
+  --color-muted: hsl(0, 0%, 60%);
+  --accent: hsl(61, 100%, 50%);
+
+  
   --hover-color: #0726b341;
   --navbar: hsla(223, 84%, 5%, 0.603);
   --color-muted-3: #000000;
@@ -130,7 +152,6 @@ body.dark {
   --span: #15ff00;
   --border: hsla(220, 2%, 73%, 0.103);
   --color-muted-4: #bbbbbb;
-  --accent: #fbff00;
   --glass-background: rgba(14, 6, 43, 0.233);
   --glass-border: rgba(20, 35, 66, 0.712);
   --card-color: rgba(225, 225, 225, 0.03);
@@ -139,6 +160,3 @@ body.dark {
   --card-linear: linear-gradient(to left top, #000000c4, #001130);
   --text-gradient: linear-gradient(90deg, rgb(160, 158, 158), rgb(59, 59, 59));
 }
-
-
-
