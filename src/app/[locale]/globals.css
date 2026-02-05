@@ -31,6 +31,11 @@ li {
   list-style: none;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -69,7 +74,7 @@ li {
 }
 
 @font-face {
-  font-family: 'The';
+  font-family: 'TheYearofHandicrafts';
   src: url('../../../public/font/TheYearofHandicrafts-Regular.otf') format('opentype');
 }
 
@@ -90,6 +95,7 @@ li {
 .title-en {
   font-family: "Playfair Display", sans-serif;
 }
+
 .but-ar {
   font-family: "Cairo", sans-serif;
 }
@@ -99,12 +105,12 @@ li {
 }
 
 .mainTitle-ar {
-  font-family: "The", sans-serif;
+  font-family: "TheYearofHandicrafts", sans-serif;
 }
 
 :root {
   --font-title-size: 2.5rem;
-  --ios-blue: hsl(211, 100%, 50%);
+  --ios-blue: rgb(0, 123, 255);
   --ios-blue-alpha: #008cff34;
   --ios-blue-alpha-2: #5d55c225;
   --color-muted-2: #070101a9;
@@ -117,10 +123,10 @@ body {
   --item-color: hsl(0, 0%, 0%);
   --color-muted: hsl(0, 0%, 28%);
   --accent: hsl(211, 100%, 50%);
+  --hover-color: hsla(213, 14%, 52%, 0.102);
 
 
 
-  --hover-color: #0070f31a;
   --navbar: hsla(0, 0%, 98%, 0.451);
   --menu: #007AFF;
   --span: #0004ff;
@@ -143,9 +149,9 @@ body.dark {
   --item-color: hsl(0, 0%, 100%);
   --color-muted: hsl(0, 0%, 60%);
   --accent: hsl(61, 100%, 50%);
+  --hover-color: hsla(229, 5%, 55%, 0.255);
 
-  
-  --hover-color: #0726b341;
+
   --navbar: hsla(223, 84%, 5%, 0.603);
   --color-muted-3: #000000;
   --menu: #1b08ccb2;
