@@ -23,13 +23,13 @@
 }
 
 .mainTitle.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .mainTitle.hidden {
-    opacity: 0;
-    transform: translateY(2.5rem);
+  opacity: 0;
+  transform: translateY(2.5rem);
 }
 
 .info {
@@ -59,7 +59,6 @@
 }
 
 .skillCategory {
-  font-family: "Plus", sans-serif;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -152,7 +151,6 @@
   border-radius: 0.75rem;
   padding: 1.5rem;
   transition: all 0.3s ease;
-  font-family: "Plus", sans-serif;
 }
 
 .timeline:hover .timelineCard {
@@ -261,6 +259,7 @@
 }
 
 @media (max-width: 740px) {
+
   .cardType span,
   .cardSkills span {
     margin: .25rem;
@@ -271,7 +270,7 @@
 
 @media (max-width: 670px) {
   .cardTitle {
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 400;
   }
 
@@ -281,12 +280,12 @@
   }
 
   .cardType span {
-    padding: .4rem .6rem;
+    padding: .3rem .9rem;
     border-radius: 20px;
   }
 
   .cardDescription {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .cardSkills span {

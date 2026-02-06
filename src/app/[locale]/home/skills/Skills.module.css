@@ -9,8 +9,7 @@
     margin: 0 auto;
 }
 
-.title {
-    font-family: "Xeroda", sans-serif;
+.mainTitle {
     color: var(--item-color);
     font-size: 1.875rem;
     font-weight: 700;
@@ -20,17 +19,17 @@
 }
 
 @media (min-width: 768px) {
-    .title {
+    .mainTitle {
         font-size: 2.25rem;
     }
 }
 
-.title.visible {
+.mainTitle.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-.title.hidden {
+.mainTitle.hidden {
     opacity: 0;
     transform: translateY(2.5rem);
 }

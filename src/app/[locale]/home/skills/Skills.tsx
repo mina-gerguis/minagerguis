@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import styles from "./Skills.module.css";
 import {
     FaReact,
@@ -38,6 +38,7 @@ import {
 
 const Skills = () => {
     const t = useTranslations('Skills');
+    const locale = useLocale();
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
 
@@ -91,10 +92,9 @@ const Skills = () => {
     return (
         <section dir="ltr" ref={sectionRef} id="skills" className={styles.section}>
             <div className={styles.container}>
-                <h2
-                    className={`${styles.title} ${isVisible ? styles.visible : styles.hidden
-                        }`}
-                >
+                <h2 className={`${styles.mainTitle} ${locale === "en" ? "mainTitle-en" : "mainTitle-ar"
+                    } ${isVisible ? styles.visible : styles.hidden
+                    }`}>
                     {t('title')}
                 </h2>
 

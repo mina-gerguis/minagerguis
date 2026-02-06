@@ -119,15 +119,18 @@ button {
 }
 
 body {
+  --mainColor: rgb(0, 123, 255);
   --bg-color: hsl(0, 0%, 100%);
   --item-color: hsl(0, 0%, 0%);
   --color-muted: hsl(0, 0%, 28%);
   --accent: hsl(211, 100%, 50%);
   --hover-color: hsla(213, 14%, 52%, 0.102);
+  --navBg: hsla(0, 0%, 98%, 0.451);
+  --brBg: 1px solid rgba(0, 0, 0, 0.15);
+  --bsBg: 0 10px 30px rgba(0, 0, 0, 0.15);
 
 
 
-  --navbar: hsla(0, 0%, 98%, 0.451);
   --menu: #007AFF;
   --span: #0004ff;
   --button: #007AFF;
@@ -145,14 +148,16 @@ body {
 }
 
 body.dark {
+  --mainColor: rgb(0, 123, 255);
   --bg-color: hsl(225, 89%, 4%);
   --item-color: hsl(0, 0%, 100%);
   --color-muted: hsl(0, 0%, 60%);
   --accent: hsl(61, 100%, 50%);
   --hover-color: hsla(229, 5%, 55%, 0.255);
+  --navBg: hsla(225, 20%, 12%, 0.65);
+  --brBg: 1px solid rgba(255, 255, 255, 0.08);
+  --bsBg: 0 10px 30px rgba(0, 0, 0, 0.6);
 
-
-  --navbar: hsla(223, 84%, 5%, 0.603);
   --color-muted-3: #000000;
   --menu: #1b08ccb2;
   --span: #15ff00;

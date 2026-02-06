@@ -60,10 +60,9 @@
   height: 100%;
 }
 
-
 .bubble-menu .menu-btn {
   border: none;
-  background: var(--menu);
+  background: var(--mainColor);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -85,7 +84,7 @@
   transform-origin: center;
 }
 
-.bubble-menu .menu-line + .menu-line {
+.bubble-menu .menu-line+.menu-line {
   margin-top: 6px;
 }
 
@@ -248,5 +247,30 @@
 
   .bubble-menu-items .pill-link:active {
     transform: scale(0.94);
+  }
+}
+
+@media (max-width: 700px) {
+  .bubble-menu {
+    top: 4em;
+    margin: 0 2px;
+    z-index: 1000;
+  }
+
+  .bubble-menu .bubble {
+    --bubble-size: 30px;
+    width: var(--bubble-size);
+    height: var(--bubble-size);
+  }
+
+  .bubble-menu .menu-line {
+    width: 20px;
+    height: 2px;
+  }
+}
+
+@media (max-width: 400px) {
+  .bubble-menu {
+    top: 5.2em;
   }
 }

@@ -29,11 +29,6 @@ export default function Home() {
       <Certificates />
       <Content />
       <Footer />
-
-
-
-
-     
     </>
   );
 }
